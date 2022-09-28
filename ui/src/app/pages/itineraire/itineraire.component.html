@@ -1,0 +1,111 @@
+<div class="container flex even">
+  <div class="cadre">
+    <div class="card text-white bg-success mb-3" style="max-width: 250rem">
+      <div class="card-body">
+        <button type="button" class="btn btn-light">
+          <a id="retour" button [routerLink]="['/home']">Retour</a>
+        </button>
+        <br />
+        <h2 class="card-title">Nom itinéraire :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.nomItineraire }}</p>
+        <br />
+        <h2 class="card-title">Type itinéraire :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.typeItineraire }}</p>
+        <br />
+        <h2 class="card-title">URL :&nbsp;</h2>
+        <a class="card-text" [href]="itineraire.url">{{ itineraire.url }}</a>
+        <br />
+        <h2 class="card-title">Thème :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.themes }}</p>
+        <br />
+        <h2 class="card-title">Presentation courte :&nbsp;</h2>
+        <p [innerHTML]="itineraire.presentationCourte" class="card-text">
+          {{ itineraire.presentationCourte }}
+        </p>
+        <br />
+        <h2 class="card-title">Presentation :&nbsp;</h2>
+        <p [innerHTML]="itineraire.presentation" class="card-text">
+          {{ itineraire.presentation }}
+        </p>
+        <br />
+        <h2 class="card-title">Nom des communes :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.communesNom }}</p>
+        <br />
+        <h2 class="card-title">Codes postaux des communes :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.communesCode }}</p>
+        <br />
+        <h2 class="card-title">Pratique :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.pratique }}</p>
+        <br />
+        <h2 class="card-title">Durée :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.duree }} H</p>
+        <br />
+        <h2 class="card-title">Difficulté :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.difficulte }}</p>
+        <br />
+        <h2 class="card-title">Longueur :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.longueur }} m</p>
+        <br />
+        <h2 class="card-title">Instructions :&nbsp;</h2>
+        <p [innerHTML]="itineraire.instructions" class="card-text">
+          {{ itineraire.instructions }}
+        </p>
+        <br />
+        <h2 class="card-title">Accessibilité :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.accessibilite }}</p>
+        <br />
+        <h2 class="card-title">Accès routier :&nbsp;</h2>
+        <p [innerHTML]="itineraire.accesRoutier" class="card-text">
+          {{ itineraire.accesRoutier }}
+        </p>
+        <br />
+        <h2 class="card-title">Transports en commun :&nbsp;</h2>
+        <p [innerHTML]="itineraire.transportsCommun" class="card-text">
+          {{ itineraire.transportsCommun }}
+        </p>
+        <br />
+        <h2 class="card-title">Parking info :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.parkingInfo }}</p>
+        <br />
+        <h2 class="card-title">Parking Géométrie :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.parkingGeometrie }}</p>
+        <br />
+        <h2 class="card-title">Type Sol :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.depart }}</p>
+        <br />
+        <h2 class="card-title">Arrivée:&nbsp;</h2>
+        <p class="card-text">{{ itineraire.arrivee }}</p>
+        <br />
+        <h2 class="card-title">Altitude Min :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.altitudeMin }}&nbsp;</p>
+        <h2 class="card-title">/ Max :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.altitudeMax }}</p>
+        <br />
+        <h2 class="card-title">Dénivelé Positif :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.denivelePositif }}&nbsp;</p>
+        <h2 class="card-title">/ Négatif :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.deniveleNegatif }}</p>
+        <br />
+        <h2 class="card-title">Balisage :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.balisage }}</p>
+        <br />
+        <h2 class="card-title">Producteur :&nbsp;</h2>
+        <p class="card-text">{{ itineraire.producteur }}</p>
+        <br />
+        <h2 class="card-title">Contact :&nbsp;</h2>
+        <a href="mailto:{{ itineraire.contact }}">{{ itineraire.contact }}</a>
+        <br />
+        <h2 class="card-title">Date Création :&nbsp;</h2>
+        <p class="card-text">
+          {{ itineraire.dateCreation | date: "dd/MM/yyyy" }}
+        </p>
+        <br />
+        <h2 class="card-title">Date Modification :&nbsp;</h2>
+        <p class="card-text">
+          {{ itineraire.dateModification | date: "dd/MM/yyyy" }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <app-map></app-map>
+</div>

@@ -1,0 +1,59 @@
+<div class="container flex column align-c col-md-10">
+  <div class="cadre">
+    <div
+      id="cadre1"
+      *ngFor="let i of itineraires"
+      class="card text-white bg-success mb-3"
+    >
+      <div class="card-header flex between">
+        <h5>{{ i.nomItineraire }}</h5>
+
+        <button
+          id="detail"
+          type="button"
+          class="btn btn-primary"
+          [routerLink]="['/itineraire/', i.id]"
+        >
+          Détail
+        </button>
+      </div>
+
+      <div class="card-body">
+        <h6 class="card-title">Type itinéraire:</h6>
+        <p class="card-text">{{ i.typeItineraire }}</p>
+        <h6 class="card-title">Thème:</h6>
+        <p class="card-text">{{ i.themes }}</p>
+        <h6 class="card-title">Presentation:</h6>
+        <p [innerHTML]="i.presentation" class="card-text">
+          {{ i.presentation }}
+        </p>
+        <!--<h6 class="card-title">Nom des communes :</h6>
+              <p class="card-text">{{ i.communesNom }}</p>
+              <h6 class="card-title">Pratique:</h6>
+              <p class="card-text">{{ i.pratique }}</p>
+              <h6 class="card-title">Durée:</h6>
+              <p class="card-text">{{ i.duree }} H</p>
+              <h6 class="card-title">Difficulté:</h6>
+              <p class="card-text">{{ i.difficulte }}</p>
+              <h6 class="card-title">Longueur:</h6>
+              <p class="card-text">{{ i.longueur }} m</p>
+              <h6 class="card-title">Départ:</h6>
+              <p class="card-text">{{ i.depart }}</p>
+              <h6 class="card-title">Arrivée:</h6>
+              <p class="card-text">{{ i.arrivee }}</p>-->
+      </div>
+    </div>
+  </div>
+  <div class="paging flex center">
+    <div class="prev">
+      <button class="listPage btn btn-info" (click)="onPrevious($event)">
+        previous
+      </button>
+    </div>
+    <div class="next">
+      <button class="listPage btn btn-info" (click)="onNext($event)">
+        next
+      </button>
+    </div>
+  </div>
+</div>

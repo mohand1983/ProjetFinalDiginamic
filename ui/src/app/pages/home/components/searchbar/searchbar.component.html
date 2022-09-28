@@ -1,0 +1,26 @@
+<div class="searchbar">
+  <form
+    role="search"
+    id="form"
+    (ngSubmit)="updateForm()"
+    [formGroup]="filter"
+    class="form-group flex col-md-10"
+  >
+    <input
+      (keyup.enter)="updateForm()"
+      (change)="updateForm()"
+      (focus)="onFocus($event)"
+      (blur)="onBlur($event)"
+      type="search"
+      id="query"
+      name="q"
+      formControlName="nomItineraire"
+      placeholder="Trouver votre itinéraire..."
+      aria-label="Search through site content"
+    />
+
+    <button type="submit">
+      <img src="assets/img/loupe.svg" alt="" />
+    </button>
+  </form>
+</div>

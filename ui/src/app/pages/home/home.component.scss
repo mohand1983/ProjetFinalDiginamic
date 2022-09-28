@@ -1,0 +1,93 @@
+#home {
+  background-image: url("/assets/img/Quel-matériel-choisir-pour-la-randonnée-avec-enfants-.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100vh;
+  float: left;
+}
+
+#home,
+.itineraires,
+.wrapper,
+.split {
+  width: 100%;
+}
+
+button {
+  margin-top: 25px;
+}
+
+#formulaire,
+#home,
+.wrapper,
+#filtre_gauche {
+  height: 100vh;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 45px;
+  width: 200px;
+  z-index: 5;
+  // cursor: pointer;
+}
+.account {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  border-radius: 50%;
+  width: 50px;
+  z-index: 5;
+  cursor: pointer;
+}
+
+#filtre_gauche,
+#formulaire {
+  min-width: 300px;
+  width: 300px;
+  color: goldenrod;
+  background-color: #424242;
+}
+
+.wrapper {
+  margin-top: 150px;
+}
+
+.login,
+.filtre-content {
+  margin-top: 150px;
+  overflow: auto;
+}
+
+.account {
+  height: 95px;
+}
+
+.search {
+  overflow: auto;
+  margin: 0 auto;
+  > .searchbar {
+    padding-top: 10px;
+  }
+}
+
+.itineraires {
+  overflow: auto;
+  height: 100%;
+}
+
+.titre {
+  max-width: calc(100vw - 600px);
+
+  h1 {
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    color: #424242;
+    font-weight: bold;
+    font-family: cursive;
+  }
+}

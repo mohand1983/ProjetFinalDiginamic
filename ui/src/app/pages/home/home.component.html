@@ -1,0 +1,60 @@
+<div class="flex container-fluid" id="home">
+  <div
+    class="flex column align-c"
+    id="filtre_gauche"
+    (mouseenter)="filter(true)"
+    (mouseleave)="filter(false)"
+    [hidden]="!isSearching && !isFiltering"
+  >
+    <div class="filtre-content col-md-10 row">
+      <div class="filtre">
+        <app-filtre-itineraire></app-filtre-itineraire>
+      </div>
+      <button (click)="hideFilter()" class="hide btn btn-primary">Hide</button>
+    </div>
+  </div>
+
+  <div class="wrapper flex column between" (click)="resetView()">
+    <div class="search flex column align-c">
+      <div class="titre">
+        <h1>Êtes-vous à court d’idées pour votre prochaine randonnée ?</h1>
+      </div>
+      <div class="searchbar">
+        <app-searchbar (focus)="toggleSearch($event)"></app-searchbar>
+      </div>
+      <div
+        class="itineraires"
+        [hidden]="
+          !isSearching &&
+          !wasFiltering &&
+          !isFiltering &&
+          !isBrowsing &&
+          !wasBrowsing
+        "
+        (mouseenter)="browse(true)"
+        (mouseleave)="browse(false)"
+      >
+        <app-liste-itineraires></app-liste-itineraires>
+      </div>
+    </div>
+    <div>
+      <app-footer></app-footer>
+    </div>
+  </div>
+
+  <div
+    class="flex column align-c"
+    id="formulaire"
+    [hidden]="!isCheckingProfile"
+  >
+    <div class="login">
+      <app-form-sign-up></app-form-sign-up>
+    </div>
+  </div>
+</div>
+<div class="account" (click)="toggleProfileOptions($event)">
+  <app-account></app-account>
+</div>
+<div class="logo">
+  <app-logo></app-logo>
+</div>

@@ -1,0 +1,29 @@
+p {
+  display: inline;
+}
+h2 {
+  display: inline;
+}
+
+.cadre {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-left: 30px;
+  width: 50%;
+}
+.card-title {
+  text-transform: uppercase;
+}
+
+.card-text {
+  text-transform: none;
+}
+
+.container {
+  width: 100%;
+}
+
+app-map {
+  width: 50%;
+}

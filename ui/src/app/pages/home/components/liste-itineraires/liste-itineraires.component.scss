@@ -1,0 +1,26 @@
+#detail {
+  color: white;
+}
+
+.cadre {
+  overflow: auto;
+  margin-bottom: 10px;
+}
+
+.cadre,
+.container {
+  height: 100%;
+}
+
+.paging > * {
+  padding: 0 10px;
+}
+
+.cadre,
+.paging {
+  width: 100%;
+}
+
+.cadre :last-child {
+  margin-bottom: 0 !important;
+}

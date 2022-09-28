@@ -1,0 +1,125 @@
+<div class="container flex column center">
+  <form
+    (ngSubmit)="updateForm()"
+    [formGroup]="filter"
+    class="form-group row col-md-10"
+  >
+    <label class="form-label" for="region">
+      Region
+      <select
+        class="form-select"
+        formControlName="region"
+        id="region"
+        (change)="updateForm()"
+      >
+        <option value="Cevennes" selected>Cevennes</option>
+      </select>
+    </label>
+
+    <label class="form-label" for="pratique">
+      Pratique
+      <select
+        class="form-select"
+        formControlName="pratique"
+        name="pratique"
+        id="pratique"
+        (change)="updateForm()"
+      >
+        <option value="pédestre">Pédestre</option>
+        <option value="trail">Trail</option>
+        <option value="VTT">VTT</option>
+        <option value="équestre">Equestre</option>
+      </select>
+    </label>
+
+    <label class="form-label" for="typeItineraire">
+      Type itinéraire
+      <select
+        class="form-select"
+        formControlName="typeItineraire"
+        name="typeItineraire"
+        id="typeItineraire"
+        (change)="updateForm()"
+      >
+        <option value="boucle">Boucle</option>
+        <option value="itinérance">Itinéraire</option>
+        <option value="allerRetour">Aller-Retour</option>
+      </select>
+    </label>
+
+    <label class="form-label" for="difficulte"
+      >Difficulté
+      <select
+        class="form-select"
+        formControlName="difficulte"
+        name="difficulte"
+        id="difficulte"
+        (change)="updateForm()"
+      >
+        <option value="Très facile">Très Facile</option>
+        <option value="Facile">Facile</option>
+        <option value="Moyen">Moyen</option>
+        <option value="Difficile">Difficile</option>
+      </select>
+    </label>
+
+    <label class="form-label" for="dureeMin"
+      >Durée minimum
+      <input
+        type="range"
+        class="form-range"
+        min="1"
+        max="120"
+        value="1"
+        id="dureeMin"
+        (change)="updateForm()"
+        formControlName="dureeMin"
+      />
+    </label>
+
+    <label class="form-label" for="dureeMax">
+      Durée maximum
+      <input
+        type="range"
+        class="form-range"
+        min="1"
+        max="120"
+        value="1"
+        id="dureeMax"
+        (change)="updateForm()"
+        formControlName="dureeMax"
+      />
+    </label>
+
+    <label class="form-label" for="longueurMin">
+      Longueur Minimum
+      <input
+        type="range"
+        class="form-range"
+        min="1"
+        max="200000"
+        value="1"
+        id="longueurMin"
+        (change)="updateForm()"
+        formControlName="longueurMin"
+      />
+    </label>
+
+    <label class="form-label" for="longueurMax">
+      Longueur maximum
+      <input
+        type="range"
+        class="form-range"
+        min="1"
+        max="200000"
+        value="1"
+        id="longueurMax"
+        (change)="updateForm()"
+        formControlName="longueurMax"
+      />
+    </label>
+  </form>
+  <button type="reset" (click)="resetFilter()" class="reset btn btn-primary">
+    Reset
+  </button>
+</div>
